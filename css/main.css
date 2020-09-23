@@ -31,3 +31,127 @@ img {
   display: block;
   width: 100%;
 }
+
+header {
+  margin: 1rem;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+header h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  max-width: 30em;
+}
+
+li a {
+  color: #3783a3;
+}
+
+div {
+  margin: 1rem
+}
+
+hr {
+  color: #e2e2e2;
+}
+
+div h2, div p {
+  text-align: center;
+}
+
+div h2 {
+  font-size: 2rem;
+}
+
+div p {
+  margin-bottom: 1.5rem;
+}
+
+section {
+  margin: 1rem;
+}
+
+section img {
+  padding: 1rem 0;
+}
+
+section h3 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+section a {
+  text-decoration: none;
+  color: #3783a3;
+  padding: .5em 1em .6em;
+  border: .2rem solid #3783a3;
+  border-radius: .3rem;
+}
+
+section p {
+  margin-bottom: 2rem;
+}
+
+footer hr {
+  margin-top: 2rem;
+}
+
+small {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+  }
+
+  header {
+    display: flex;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(1fr 1fr 1fr);
+    grid-template-rows: repeat(1fr 1fr 1fr);
+    grid-template-areas:
+    "intro intro intro"
+    "viewing gravel symbolism";
+    gap: 1rem;
+  }
+
+  .intro {
+    grid-area: intro;
+  }
+
+  .viewing {
+    grid-area: viewing;
+  }
+
+  .gravel {
+    grid-area: gravel;
+  }
+
+  .symbolism {
+    grid-area: symbolism;
+  }
+
+}
