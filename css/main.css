@@ -33,7 +33,7 @@ img {
 }
 
 header {
-  margin: 1rem;
+  margin: 1rem 1rem 1.5rem;
 }
 
 header div {
@@ -49,14 +49,14 @@ h1 {
 }
 
 header h2 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0 0 1rem;
+  padding: 0 .5rem 1rem;
+  margin: 0;
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -66,6 +66,7 @@ ul {
 
 li a {
   color: #3783a3;
+  font-size: 1.125rem;
 }
 
 div {
@@ -82,6 +83,7 @@ div h2, div p {
 
 .intro h2 {
   font-size: 2rem;
+  font-weight: normal;
 }
 
 div p {
@@ -97,7 +99,7 @@ section {
 }
 
 section img {
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 
 section h3 {
@@ -135,11 +137,13 @@ small {
   }
 
   header {
+    margin-bottom: .5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100%);
     grid-template-areas: "title nav" "banner banner";
     align-items: center;
+    place-content: start;
   }
 
   header h1, header h2 {
@@ -153,6 +157,7 @@ small {
   header div {
     grid-area: title;
     margin-bottom: 1rem;
+    padding-left: .5rem;
   }
 
   nav {
@@ -168,17 +173,21 @@ small {
   }
 
   main {
-    margin: 1rem;
+    margin: 0 1rem 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100% 100% 100%;
     grid-template-areas: "intro intro intro" "viewing gravel symbolism";
     gap: 1em;
+    place-items: center;
+    align-items: flex-start;
   }
 
   .intro {
     grid-area: intro;
     margin: 0;
+    padding: .75rem 0 0;
+    line-height: 1.5;
   }
 
   .viewing {
@@ -198,7 +207,7 @@ small {
 
   section img {
     padding-top: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
   }
 
 }
