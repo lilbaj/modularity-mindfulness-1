@@ -69,7 +69,7 @@ li a {
 }
 
 div {
-  margin: 1rem
+  margin: 1rem;
 }
 
 hr {
@@ -94,7 +94,6 @@ section {
 
 .intro {
   max-width: 30em;
-
 }
 
 section img {
@@ -138,10 +137,8 @@ small {
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(1fr 1fr);
-    grid-template-areas:
-    "title nav"
-    "banner banner";
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "title nav" "banner banner";
     align-items: center;
   }
 
@@ -165,6 +162,7 @@ small {
   header img {
     grid-area: banner;
   }
+
   ul {
     margin-bottom: 0;
   }
@@ -173,10 +171,8 @@ small {
     margin: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(1fr 1fr);
-    grid-template-areas:
-    "intro intro intro"
-    "viewing gravel symbolism";
+    grid-template-rows: 100% 100% 100%;
+    grid-template-areas: "intro intro intro" "viewing gravel symbolism";
     gap: 1em;
   }
 
@@ -203,10 +199,6 @@ small {
   section img {
     padding-top: 0;
     padding-bottom: 1rem;
-  }
-
-  section a {
-
   }
 
 }
