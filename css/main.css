@@ -129,12 +129,12 @@ small {
   }
 
   header {
-    display: flex;
-  }
-
-  header div, nav {
-    width: 50%;
-    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "title nav"
+    "banner banner";
   }
 
   header h1, header h2 {
@@ -145,16 +145,23 @@ small {
     font-size: 1.125rem;
   }
 
+  header div {
+    grid-area: title;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
   header img {
-    width: 100%;
-    flex-shrink: 0;
-    display: block;
+    grid-area: banner;
   }
 
   main {
+    margin: 1rem;
     display: grid;
-    grid-template-columns: repeat(1fr 1fr 1fr);
-    grid-template-rows: repeat(1fr 1fr 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1fr 1fr);
     grid-template-areas:
     "intro intro intro"
     "viewing gravel symbolism";
@@ -167,14 +174,17 @@ small {
 
   .viewing {
     grid-area: viewing;
+    margin: 0;
   }
 
   .gravel {
     grid-area: gravel;
+    margin: 0;
   }
 
   .symbolism {
     grid-area: symbolism;
+    margin: 0;
   }
 
 }
