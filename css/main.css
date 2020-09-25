@@ -102,6 +102,7 @@ section h3 {
 }
 
 section a {
+  display: block;
   text-decoration: none;
   color: #3783a3;
   padding: .5em 1em .6em;
@@ -113,13 +114,13 @@ section p {
   margin-bottom: 2rem;
 }
 
-footer hr {
+footer {
+  text-align: center;
   margin-top: 2rem;
 }
 
 small {
-  text-align: center;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 @media only screen and (min-width: 38em) {
@@ -131,10 +132,11 @@ small {
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(1fr 1fr);
     grid-template-areas:
     "title nav"
     "banner banner";
+    align-items: center;
   }
 
   header h1, header h2 {
@@ -147,6 +149,7 @@ small {
 
   header div {
     grid-area: title;
+    margin-bottom: 1rem;
   }
 
   nav {
@@ -155,6 +158,9 @@ small {
 
   header img {
     grid-area: banner;
+  }
+  ul {
+    margin-bottom: 0;
   }
 
   main {
@@ -165,7 +171,7 @@ small {
     grid-template-areas:
     "intro intro intro"
     "viewing gravel symbolism";
-    gap: 1rem;
+    gap: 1em;
   }
 
   .intro {
@@ -175,16 +181,24 @@ small {
   .viewing {
     grid-area: viewing;
     margin: 0;
+    align-items: start;
   }
 
   .gravel {
     grid-area: gravel;
     margin: 0;
+    align-items: start;
   }
 
   .symbolism {
     grid-area: symbolism;
     margin: 0;
+    align-items: start
+  }
+
+  section img {
+    padding-top: 0;
+    padding-bottom: 1rem;
   }
 
 }
