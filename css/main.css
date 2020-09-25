@@ -126,7 +126,8 @@ small {
 @media only screen and (min-width: 38em) {
 
   html {
-    font-size: 110%;
+    font-size: 100%;
+    line-height: 1.4;
   }
 
   header {
@@ -181,24 +182,25 @@ small {
   .viewing {
     grid-area: viewing;
     margin: 0;
-    align-items: start;
   }
 
   .gravel {
     grid-area: gravel;
     margin: 0;
-    align-items: start;
   }
 
   .symbolism {
     grid-area: symbolism;
     margin: 0;
-    align-items: start
   }
 
   section img {
     padding-top: 0;
     padding-bottom: 1rem;
+  }
+
+  section a {
+
   }
 
 }
